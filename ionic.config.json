@@ -1,5 +1,7 @@
 {
   "name": "IonicDiscovery",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,0 +1,53 @@
+<ion-header translucent>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ion-datetime</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-card routerLink ="../home">
+    <ion-card-header>
+      <ion-card-subtitle>Component</ion-card-subtitle>
+      <ion-card-title>ion-datetime</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      ion-datetime permet de mettre en place une alarme ou un événement.
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item>
+      <ion-input placeholder="Titre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Lieu"></ion-input>
+    </ion-item>
+    <ion-item-divider></ion-item-divider>
+    <ion-item>
+      <ion-label>Date de début</ion-label>
+      <ion-datetime value="1990-02-19" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Heure de début</ion-label>
+      <ion-datetime display-format="h:mm A" picker-format="h:mm A" value="1990-02-19T07:43Z"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fin</ion-label>
+      <ion-datetime value="1990-02-20" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Répéter</ion-label>
+      <ion-datetime placeholder="Never" disabled></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Temps de trajet</ion-label>
+      <ion-datetime placeholder="None" disabled></ion-datetime>
+    </ion-item>
+    <ion-item-divider></ion-item-divider>
+    <ion-item>
+      <ion-label>Alerte</ion-label>
+      <ion-datetime placeholder="None" disabled></ion-datetime>
+    </ion-item>
+  </ion-list>
+</ion-content>

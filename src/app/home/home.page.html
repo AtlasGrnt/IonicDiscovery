@@ -1,14 +1,85 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-menu side="start">
+  <ion-header>
+    <ion-toolbar translucent>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item routerLink="../carte">
+        <ion-icon name="arrow-forward" slot="start"></ion-icon>
+        <ion-label >Card</ion-label>
+      </ion-item>
+      <ion-item routerLink="../checkbox">
+        <ion-icon name="arrow-forward" slot="start"></ion-icon>
+        <ion-label >Checkbox</ion-label>
+      </ion-item>
+      <ion-item routerLink="../chip">
+        <ion-icon name="arrow-forward" slot="start"></ion-icon>
+        <ion-label>Chip</ion-label>
+      </ion-item>
+      <ion-item routerLink="../fab">
+        <ion-icon name="arrow-forward" slot="start"></ion-icon>
+        <ion-label>FAB</ion-label>
+      </ion-item>
+      <ion-item routerLink="../badge">
+        <ion-icon name="arrow-forward" slot="start"></ion-icon>
+        <ion-label>Badge</ion-label>
+      </ion-item>
+      <ion-item routerLink="../list">
+        <ion-icon name="arrow-forward" slot="start"></ion-icon>
+        <ion-label>List</ion-label>
+      </ion-item>
+      <ion-item routerLink="../sign-up">
+        <ion-icon name="arrow-forward" slot="start"></ion-icon>
+        <ion-label>Input</ion-label>
+      </ion-item>
+      <ion-item routerLink="../progress-bar">
+        <ion-icon name="arrow-forward" slot="start"></ion-icon>
+        <ion-label>Progress Bar</ion-label>
+      </ion-item>
+      <ion-item routerLink="../tabs">
+        <ion-icon name="arrow-forward" slot="start"></ion-icon>
+        <ion-label>Tabs</ion-label>
+      </ion-item>
+      <ion-item routerLink="../datetime">
+        <ion-icon name="arrow-forward" slot="start"></ion-icon>
+        <ion-label>Datetime</ion-label>
+      </ion-item>      
+      <ion-item routerLink="../settings">
+        <ion-icon name="settings" slot="start"></ion-icon>
+        <ion-label >Settings</ion-label >
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
-</ion-content>
+<div class="ion-page" main>
+  <ion-header>
+    <ion-toolbar translucent>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Ionic Discovery</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+  <ion-button expand="block" color="success" (click)="openActionSheet()">Action sheet</ion-button>
+  <ion-button color="primary" routerLink="../carte">ion-card</ion-button>
+  <ion-button color="secondary" routerLink="../checkbox">ion-checkbox</ion-button>
+  <ion-button color="tertiary" routerLink="../chip">ion-chip</ion-button>
+  <ion-button color="medium" routerLink="../fab">ion-fab</ion-button>
+  <ion-button color="dark" routerLink="../badge">ion-badge</ion-button>
+  <ion-button color="light" routerLink="../list">ion-list</ion-button>
+  <ion-button color="danger" routerLink="../sign-up">ion-input</ion-button>
+  <ion-button color="warning" routerLink="../progress-bar">ion-progress-bar</ion-button>
+  <ion-button color="success" routerLink="../tabs">ion-tabs</ion-button>
+  <ion-button color="primary" routerLink="../datetime">ion-datetime</ion-button>
+  <ion-button color="dark" (click)="toggleDarkMode()">Dark Mode</ion-button>
+
+
+  <ion-searchbar animated></ion-searchbar>
+
+  
+  </ion-content>
+</div>

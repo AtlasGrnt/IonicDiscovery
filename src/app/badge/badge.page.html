@@ -1,0 +1,58 @@
+<ion-header translucen>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ion-badge</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-card routerLink="../home">
+    <ion-card-header>
+      <ion-card-subtitle>Component</ion-card-subtitle>
+      <ion-card-title>ion-badge</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      les Badges sont des éléments inline s'afichant en général pres d'autres éléments. Il contiennent principales des nombres ou des caractères et peuvent être utilisé comme notification.
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-list-header>Badges</ion-list-header>
+    <ion-item>
+      <ion-label>Abonnés</ion-label>
+      <ion-badge slot="end">22k</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Likes</ion-label>
+      <ion-badge color="secondary" slot="end">118k</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>j'aime</ion-label>
+      <ion-badge color="tertiary" slot="end">34k</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Téléchargements</ion-label>
+      <ion-badge color="success" slot="end">80</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Alertes</ion-label>
+      <ion-badge color="warning" slot="end">3</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Notifications</ion-label>
+      <ion-badge color="danger" slot="end">1000</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Non lu</ion-label>
+      <ion-badge color="light" slot="end">24</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Spam</ion-label>
+      <ion-badge color="medium" slot="end">14</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Supprimé</ion-label>
+      <ion-badge color="dark" slot="end">4</ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-content>

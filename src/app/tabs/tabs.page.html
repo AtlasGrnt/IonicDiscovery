@@ -1,0 +1,45 @@
+<ion-header translucent>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ion-tabs</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-card routerLink ="../home">
+    <ion-card-header>
+      <ion-card-subtitle>Component</ion-card-subtitle>
+      <ion-card-title>ion-tabs</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      ion-tabs est un component qui fait apparaitre une barre de recherche sur laquelle on dispose des icon.
+    </ion-card-content>
+  </ion-card>
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="schedule">
+      <ion-icon name="calendar"></ion-icon>
+      <ion-label>Evenements</ion-label>
+      <ion-badge>6</ion-badge>
+    </ion-tab-button>
+
+    <ion-tab-button tab="speakers" routerLink="../list">
+      <ion-icon name="contacts"></ion-icon>
+      <ion-label>Contact</ion-label>
+      <ion-badge>153</ion-badge>
+    </ion-tab-button>
+
+    <ion-tab-button tab="map">
+      <ion-icon name="map"></ion-icon>
+      <ion-label>Carte</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="about">
+      <ion-icon name="information-circle"></ion-icon>
+      <ion-label>A propos</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+</ion-content>

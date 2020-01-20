@@ -1,0 +1,118 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ion-list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-card routerLink ="../home">
+    <ion-card-header>
+      <ion-card-subtitle>Component</ion-card-subtitle>
+      <ion-card-title>ion-list</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      ion-list est un component qui permet de lister des éléments divers. Il est pratique par exemple pour une liste de contact ou de messages.
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-list-header>
+      Conversations récentes
+    </ion-list-header>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="../../assets/avatar/avatar-finn.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Finn</h2>
+        <h3>Friendzone</h3>
+        <p>Elle m'aimera un jour...</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="../../assets/avatar/avatar-han.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Han</h2>
+        <h3>Mon fils ma bataille</h3>
+        <p>Il m'a buté ce con...</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="../../assets/avatar/avatar-rey.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Rey</h2>
+        <h3>Palpatine</h3>
+        <p>je suis pas une sdf des sables...</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="../../assets/avatar/avatar-luke.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Luke</h2>
+        <h3>où est papou ?</h3>
+        <p>je crois que j'aime ma soeur...</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header >
+      En ligne 
+    </ion-list-header>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="../../assets/avatar/avatar-poe.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Poe</h2>
+        <h3>Inutile</h3>
+        <p>j'ai un nom de teletubbies...</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="../../assets/avatar/avatar-ben.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Ben</h2>
+        <h3>Jedi</h3>
+        <p>tu ne vends pas de baton de la mort...</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="../../assets/avatar/avatar-leia.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Leia</h2>
+        <h3>Skywalker</h3>
+        <p>Dis à Han de sortir le chien stp...</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="../../assets/avatar/avatar-yoda.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>Yoda</h2>
+        <h3>Baby</h3>
+        <p>A MOI ! A MOI !...</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,56 @@
+<ion-header translucent>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ion-input</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-card routerLink ="../home">
+    <ion-card-header>
+      <ion-card-subtitle>Component</ion-card-subtitle>
+      <ion-card-title>ion-input</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      ion-input est un component qui permet d'ahouter des champs dans lesquels les utilisateur peuvent saisir des données.
+    </ion-card-content>
+  </ion-card>
+  <form>
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="stacked">Prénom <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input></ion-input >
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Nom <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating">Age <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Addresse</ion-label>
+        <ion-input placeholder="Addresse"></ion-input>
+        <ion-input placeholder="Complément d'adresse"></ion-input>
+        <ion-input placeholder="Ville"></ion-input>
+        <ion-input placeholder="Code Postal"></ion-input>
+        <ion-input placeholder="Pays"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Notes</ion-label>
+        <ion-textarea></ion-textarea>
+      </ion-item>
+    </ion-list>
+
+    <div class="ion-padding">
+      <ion-button expand="block" type="submit" class="ion-no-margin">Créer mon compte</ion-button>
+    </div>
+  </form>
+</ion-content>

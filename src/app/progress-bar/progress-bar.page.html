@@ -1,0 +1,32 @@
+<ion-header translucent>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ion-progress-bar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-card routerLink ="../home">
+    <ion-card-header>
+      <ion-card-subtitle>Component</ion-card-subtitle>
+      <ion-card-title>ion-progress-bar</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      ion-progress-bar est un component qui permet d'afficher une barre d'avancement.
+    </ion-card-content>
+  </ion-card>
+  <br>
+  <ion-progress-bar></ion-progress-bar>
+  <br>
+  <ion-progress-bar color="primary" value="0.5"></ion-progress-bar>
+  <br>
+  <ion-progress-bar color="secondary" value="0.5"></ion-progress-bar>
+  <br>
+  <ion-progress-bar value="0.25" buffer="0.5"></ion-progress-bar>
+  <br>
+  <ion-progress-bar type="indeterminate"></ion-progress-bar>
+  <br>
+  <ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar>
+</ion-content>
