@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Platform } from '@ionic/angular';
-import { readSync } from 'fs';
 
 @Injectable({
   providedIn: 'root'
