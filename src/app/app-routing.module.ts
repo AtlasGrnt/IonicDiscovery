@@ -43,9 +43,13 @@ const routes: Routes = [
   {
     path: 'datetime',
     loadChildren: () => import('./datetime/datetime.module').then( m => m.DatetimePageModule)
-  },  {
+  },
+  {
     path: 'settings',
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },  {
+    path: 'chat-finn',
+    loadChildren: () => import('./chat-finn/chat-finn.module').then( m => m.ChatFinnPageModule)
   },
 
 

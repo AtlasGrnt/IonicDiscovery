@@ -3,6 +3,8 @@ import { ActionSheetController } from '@ionic/angular';
 import { MenuController} from '@ionic/angular';
 import { RouterLink } from '@angular/router';
 import { ThemeService } from '../services/theme.service';
+import { BadgePage } from '../badge/badge.page';
+
 
 @Component({
   selector: 'app-home',
@@ -12,7 +14,11 @@ import { ThemeService } from '../services/theme.service';
 
 export class HomePage {
 
-  constructor(private themeService: ThemeService, private actionSheetController: ActionSheetController, menu: MenuController) {}
+  jsonData:any=[];
+
+  constructor(private themeService: ThemeService, private actionSheetController: ActionSheetController, menu: MenuController) {
+    this.InitialiseJsonData();
+  }
 
   toggleDarkMode(){
     this.themeService.toggleAppTheme();
@@ -50,6 +56,63 @@ export class HomePage {
       }]
     });
     await actionSheet.present();
+  }
+
+  FilterJsonData(ev:any){
+    this.InitialiseJsonData();
+    const val = ev.target.value;
+    if (val && val.trim() != '' )
+    {
+      this.jsonData = this.jsonData.filter((item) =>{
+        return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
+      })
+    }
+  }
+
+  selectVal(val)
+  {
+  }
+
+  InitialiseJsonData(){
+    this.jsonData = [
+      {
+        "name": "Ion-Badge",
+        "code": "BA"
+      },
+      {
+        "name": "Ion-Card",
+        "code": "CA"
+      },
+      {
+        "name": "Ion-Checkbox",
+        "code": "CH"
+      },
+      {
+        "name": "Ion-Chip",
+        "code": "CI"
+      },
+      {
+        "name": "Ion-Datetime",
+        "code": "DA"
+      }, 
+      {
+        "name": "Ion-Fab",
+        "code": "FA"
+      },
+      {
+        "name": "Ion-List",
+        "code": "LI"
+      },
+      {
+        "name": "Progress Bar",
+        "code": "PR"
+      },
+      {
+        "name": "Ion-Tabs",
+        "code": "TA"
+      },
+      
+    ]
   }
 
 }

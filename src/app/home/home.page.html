@@ -7,45 +7,38 @@
   <ion-content>
     <ion-list>
       <ion-item routerLink="../carte">
-        <ion-icon name="arrow-forward" slot="start"></ion-icon>
         <ion-label >Card</ion-label>
       </ion-item>
       <ion-item routerLink="../checkbox">
-        <ion-icon name="arrow-forward" slot="start"></ion-icon>
         <ion-label >Checkbox</ion-label>
       </ion-item>
       <ion-item routerLink="../chip">
-        <ion-icon name="arrow-forward" slot="start"></ion-icon>
         <ion-label>Chip</ion-label>
       </ion-item>
       <ion-item routerLink="../fab">
-        <ion-icon name="arrow-forward" slot="start"></ion-icon>
         <ion-label>FAB</ion-label>
       </ion-item>
       <ion-item routerLink="../badge">
-        <ion-icon name="arrow-forward" slot="start"></ion-icon>
         <ion-label>Badge</ion-label>
       </ion-item>
       <ion-item routerLink="../list">
-        <ion-icon name="arrow-forward" slot="start"></ion-icon>
         <ion-label>List</ion-label>
       </ion-item>
       <ion-item routerLink="../sign-up">
-        <ion-icon name="arrow-forward" slot="start"></ion-icon>
         <ion-label>Input</ion-label>
       </ion-item>
       <ion-item routerLink="../progress-bar">
-        <ion-icon name="arrow-forward" slot="start"></ion-icon>
         <ion-label>Progress Bar</ion-label>
       </ion-item>
       <ion-item routerLink="../tabs">
-        <ion-icon name="arrow-forward" slot="start"></ion-icon>
         <ion-label>Tabs</ion-label>
       </ion-item>
       <ion-item routerLink="../datetime">
-        <ion-icon name="arrow-forward" slot="start"></ion-icon>
         <ion-label>Datetime</ion-label>
-      </ion-item>      
+      </ion-item>  
+      <ion-item routerLink="../chat">
+        <ion-label>Chat</ion-label>
+      </ion-item>    
       <ion-item routerLink="../settings">
         <ion-icon name="settings" slot="start"></ion-icon>
         <ion-label >Settings</ion-label >
@@ -64,22 +57,25 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
-  <ion-button expand="block" color="success" (click)="openActionSheet()">Action sheet</ion-button>
-  <ion-button color="primary" routerLink="../carte">ion-card</ion-button>
-  <ion-button color="secondary" routerLink="../checkbox">ion-checkbox</ion-button>
-  <ion-button color="tertiary" routerLink="../chip">ion-chip</ion-button>
-  <ion-button color="medium" routerLink="../fab">ion-fab</ion-button>
-  <ion-button color="dark" routerLink="../badge">ion-badge</ion-button>
-  <ion-button color="light" routerLink="../list">ion-list</ion-button>
-  <ion-button color="danger" routerLink="../sign-up">ion-input</ion-button>
-  <ion-button color="warning" routerLink="../progress-bar">ion-progress-bar</ion-button>
-  <ion-button color="success" routerLink="../tabs">ion-tabs</ion-button>
-  <ion-button color="primary" routerLink="../datetime">ion-datetime</ion-button>
+    <ion-card href="https://ionicframework.com/docs">
+      <img src="../../assets/theme/ionic.jpg"/>
+      <ion-card-header>
+        <ion-card-subtitle></ion-card-subtitle>
+        <ion-card-title>IonicDiscovery</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+         est une application mobile permettant de démontrer différentes fonctionnalités disponible sous Ionic v4.
+      </ion-card-content>
+    </ion-card>
 
 
+  <ion-searchbar (ionInput)="FilterJsonData($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item (click)="selectVal(item.name)" *ngFor="let item of jsonData">{{item.name}}</ion-item>
+  </ion-list>
 
-  <ion-searchbar animated></ion-searchbar>
 
+  
   
   </ion-content>
 </div>
