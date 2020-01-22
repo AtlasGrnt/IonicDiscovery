@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonContent } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-chat-finn',
   templateUrl: './chat-finn.page.html',
@@ -28,10 +29,7 @@ export class ChatFinnPage {
 
   currentUser = 'greg';
   newMsg = '';
-  @ViewChild(IonContent) content: IonContent
-
-
-  constructor () { }
+  @ViewChild(IonContent, {static: true}) content: IonContent;
 
   sendMessage(){
     this.messages.push({
