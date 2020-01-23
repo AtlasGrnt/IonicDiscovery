@@ -10,11 +10,20 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {IonicStorageModule} from '@ionic/storage';
 import {Brightness} from '@ionic-native/brightness/ngx';
+import firebaseConfig from './firebase';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+  AngularFireModule.initializeApp(firebaseConfig),
+  AngularFireAuthModule
+],
   providers: [
     StatusBar,
     SplashScreen,
