@@ -22,14 +22,24 @@
     "@angular/router": "~8.1.2",
     "@ionic-native/brightness": "^5.19.1",
     "@ionic-native/core": "^5.0.0",
+    "@ionic-native/facebook": "^5.20.0",
+    "@ionic-native/firebase": "^5.20.0",
     "@ionic-native/splash-screen": "^5.0.0",
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^4.7.1",
     "@ionic/storage": "^2.2.0",
     "angular": "^1.7.9",
     "cordova-android": "^8.1.0",
+    "cordova-browser": "6.0.0",
     "cordova-plugin-brightness": "^0.2.0",
+    "cordova-plugin-browsertab": "0.2.0",
+    "cordova-plugin-buildinfo": "4.0.0",
+    "cordova-plugin-compat": "1.2.0",
+    "cordova-plugin-facebook4": "^6.2.0",
     "cordova-plugin-fingerprint-aio": "^3.0.0",
+    "cordova-plugin-firebase": "^2.0.5",
+    "cordova-plugin-inappbrowser": "3.2.0",
+    "cordova-universal-links-plugin-fix": "1.2.1",
     "core-js": "^2.5.4",
     "firebase": "^7.7.0",
     "ngx-autosize": "^1.7.2",
@@ -82,10 +92,22 @@
       },
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-fingerprint-aio": {},
-      "cordova-plugin-brightness": {}
+      "cordova-plugin-brightness": {},
+      "cordova-plugin-buildinfo": {},
+      "cordova-universal-links-plugin": {},
+      "cordova-plugin-browsertab": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-facebook4": {
+        "APP_ID": "486426422270217",
+        "APP_NAME": "IonicDiscovery",
+        "FACEBOOK_HYBRID_APP_EVENTS": "false",
+        "FACEBOOK_ANDROID_SDK_VERSION": "5.5.2"
+      },
+      "cordova-plugin-firebase": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "browser"
     ]
   }
 }

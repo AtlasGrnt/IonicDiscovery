@@ -4,6 +4,8 @@ import { MenuController} from '@ionic/angular';
 import { RouterLink } from '@angular/router';
 import { ThemeService } from '../services/theme.service';
 import { BadgePage } from '../badge/badge.page';
+import {AngularFireAuth} from '@angular/fire/auth';
+import {auth} from 'firebase/app';
 
 
 @Component({
@@ -14,13 +16,16 @@ import { BadgePage } from '../badge/badge.page';
 
 export class HomePage {
 
-  jsonData:any=[];
+  jsonData: any = [];
 
-  constructor(private themeService: ThemeService, private actionSheetController: ActionSheetController, menu: MenuController) {
+  constructor(public afAuth: AngularFireAuth,
+              private themeService: ThemeService,
+              private actionSheetController: ActionSheetController,
+              menu: MenuController) {
     this.InitialiseJsonData();
   }
 
-  toggleDarkMode(){
+  toggleDarkMode() {
     this.themeService.toggleAppTheme();
   }
 
@@ -58,61 +63,62 @@ export class HomePage {
     await actionSheet.present();
   }
 
-  FilterJsonData(ev:any){
+  FilterJsonData(ev: any) {
     this.InitialiseJsonData();
     const val = ev.target.value;
-    if (val && val.trim() != '' )
-    {
-      this.jsonData = this.jsonData.filter((item) =>{
+    if (val && val.trim() !== '' ) {
+      this.jsonData = this.jsonData.filter((item) => {
         return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
-      })
+      });
     }
   }
 
-  selectVal(val)
-  {
+  logout() {
+    this.afAuth.auth.signOut();
   }
 
-  InitialiseJsonData(){
+  selectVal(val) {
+  }
+
+  InitialiseJsonData() {
     this.jsonData = [
       {
-        "name": "Ion-Badge",
-        "code": "BA"
+        name: 'Ion-Badge',
+        code: 'BA'
       },
       {
-        "name": "Ion-Card",
-        "code": "CA"
+        name: 'Ion-Card',
+        code: 'CA'
       },
       {
-        "name": "Ion-Checkbox",
-        "code": "CH"
+        name: 'Ion-Checkbox',
+        code: 'CH'
       },
       {
-        "name": "Ion-Chip",
-        "code": "CI"
+        name: 'Ion-Chip',
+        code: 'CI'
       },
       {
-        "name": "Ion-Datetime",
-        "code": "DA"
-      }, 
-      {
-        "name": "Ion-Fab",
-        "code": "FA"
+        name: 'Ion-Datetime',
+        code: 'DA'
       },
       {
-        "name": "Ion-List",
-        "code": "LI"
+        name: 'Ion-Fab',
+        code: 'FA'
       },
       {
-        "name": "Progress Bar",
-        "code": "PR"
+        name: 'Ion-List',
+        code: 'LI'
       },
       {
-        "name": "Ion-Tabs",
-        "code": "TA"
+        name: 'Progress Bar',
+        code: 'PR'
       },
-      
-    ]
+      {
+        name: 'Ion-Tabs',
+        code: 'TA'
+      },
+    ];
   }
 
 }

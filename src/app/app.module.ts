@@ -14,6 +14,9 @@ import firebaseConfig from './firebase';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
+import { Facebook } from '@ionic-native/facebook/ngx';
+import { AngularFireDatabase, AngularFireDatabaseModule } from '@angular/fire/database';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,9 +25,11 @@ import { environment } from 'src/environments/environment';
     IonicModule.forRoot(),
     AppRoutingModule,
   AngularFireModule.initializeApp(firebaseConfig),
-  AngularFireAuthModule
+  AngularFireDatabaseModule,
+  AngularFireAuthModule,
 ],
   providers: [
+    Facebook,
     StatusBar,
     SplashScreen,
     Brightness,

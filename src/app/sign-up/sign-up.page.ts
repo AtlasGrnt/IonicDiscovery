@@ -11,9 +11,9 @@ import {Router} from '@angular/router';
 })
 export class SignUpPage implements OnInit {
 
-  username: string = '';
-  password: string = '';
-  cpassword: string = '';
+  username = '';
+  password = '';
+  cpassword = '';
 
 
   constructor(public afAuth: AngularFireAuth, public alert: AlertController, public router: Router) { }
@@ -21,30 +21,30 @@ export class SignUpPage implements OnInit {
   ngOnInit() {
   }
 
-  async register(){
-    const { username, password, cpassword} = this
+  async register() {
+    const { username, password, cpassword} = this;
     if (password !== cpassword) {
-      this.showAlert('Erreur:', 'Les mots de passe ne correspondent pas')
-      return console.log('Les mots de passe ne correspondent pas')
+      this.showAlert('Erreur:', 'Les mots de passe ne correspondent pas');
+      return console.log('Les mots de passe ne correspondent pas');
     }
     try {
-      const res = await this.afAuth.auth.createUserWithEmailAndPassword(username, password)
-      console.log(res)
-      this.showAlert('Success!', 'Bienvenue sur IonicDiscovery')
-      this.router.navigate(['../home'])
+      const res = await this.afAuth.auth.createUserWithEmailAndPassword(username, password);
+      console.log(res);
+      this.showAlert('Success!', 'Bienvenue sur IonicDiscovery');
+      this.router.navigate(['../home']);
     } catch (error) {
-      console.dir(error)
-      this.showAlert('Erreur', error.message)
-    }    
+      console.dir(error);
+      this.showAlert('Erreur', error.message);
+    }
   }
 
   async showAlert(header: string, message: string) {
     const alert = await this.alert.create({
       header,
       message,
-      buttons: ["Ok"]
-    })
-    await alert.present()
+      buttons: ['Ok']
+    });
+    await alert.present();
   }
 
 }
